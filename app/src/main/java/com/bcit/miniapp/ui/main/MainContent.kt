@@ -40,7 +40,8 @@ fun MainContent(catRepository: CatRepository) {
 
     val navController = rememberNavController()
 
-    val favourites = remember { mutableStateListOf<FavoriteItem>() } // List to store favorites
+    val favourites = remember { mutableStateListOf<FavoriteItem>() }
+
     LaunchedEffect(
         key1 = catState,
         block = {

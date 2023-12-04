@@ -14,8 +14,6 @@ class CatRepository(
         val factResponse = client.get(ApiEndPoints.FACT_URL.url)
         val factJson = factResponse.body<JsonObject>().toString()
 
-        println(factJson)
-
         return deserializeFactJson(factJson)
     }
 
